@@ -81,20 +81,26 @@ class App(ct.CTk):
                                          command = self.stop)
         self.close_button.grid(row = 10, column = 0, padx = 10, pady = 10)
 
+        # Theme toggle on left left_sidebar
+        self.theme_switch = ct.CTkSwitch(master = self.left_sidebar,
+                                         text = "Light Mode",
+                                         command = self.change_mode)
+        self.theme_switch.grid(row = 8, column = 0, padx = 10, pady = 10)
+
         # Right frame
         self.right_frame = ct.CTkFrame(master = self)
         self.right_frame.grid(row = 0, column = 1, sticky = "nswe", padx = 10, pady = 10)
 
         # Settings menu container
         self.settings_menu = ct.CTkFrame(master = self.right_frame,
-                                         bg_color = self['bg'])
-        self.settings_menu.grid(row = 0, column = 0, sticky = "nswe")
+                                         fg_color = ('gray95', 'gray12'))
+        self.settings_menu.grid(row = 1, column = 0, sticky = "nswe", padx = 10, pady = 10)
 
     def change_theme(self):
         ct.set_default_color_theme("blue")
 
     def change_mode(self):
-        if 0 == 1: ## change 0 to be the switch object .get()
+        if self.theme_switch.get() == 0:
             ct.set_appearance_mode("dark")
         else:
             ct.set_appearance_mode("light")
