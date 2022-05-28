@@ -1,13 +1,6 @@
 # Clicker Game
 # by xP9nda
 
-# All GUI Elements:
-# left_sidebar - the left sidebar frame
-# title - label on left sidebar showing game title and author
-# title_version - label on left sidebar showing game version
-# settings_button - button on left sidebar to open settings
-# close_button - button on left sidebar to close game
-
 # Imports
 import tkinter
 import customtkinter as ct
@@ -33,7 +26,7 @@ class App(ct.CTk):
         self.attributes("-fullscreen", True)
 
         self.protocol("WM_DELETE_WINDOW", self.stop)
-        
+
         # Configure the grid layout
         self.grid_columnconfigure(1, weight = 1)
         self.grid_rowconfigure(0, weight = 1)
@@ -43,7 +36,7 @@ class App(ct.CTk):
                                         width = 200,
                                         corner_radius = 0)
         self.left_sidebar.grid(row = 0, column = 0, stick = "nswe")
-        
+
         # configure left sidebar grid layout
         self.left_sidebar.grid_rowconfigure(0, minsize = 10)
         # make row 5 the entire size to allow placing things at the bottom
@@ -60,7 +53,7 @@ class App(ct.CTk):
                                          text = "v0",
                                          text_font = ("Verdana", -12))
         self.title_version.grid(row = 2, column = 0, padx = 10)
-        
+
         # Dashboard button on left sidebar
         settings_icon = ImageTk.PhotoImage(Image.open(PATH + "/icons/dashboard.png").resize((IMG_SIZE, IMG_SIZE)).convert("RGBA"))
         self.settings_button = ct.CTkButton(master = self.left_sidebar,
@@ -69,7 +62,7 @@ class App(ct.CTk):
                                             image = settings_icon,
                                             command = None)
         self.settings_button.grid(row = 3, column = 0, padx = 10, pady = 10)
-        
+
         # Settings button on left sidebar
         settings_icon = ImageTk.PhotoImage(Image.open(PATH + "/icons/settings.png").resize((IMG_SIZE, IMG_SIZE)).convert("RGBA"))
         self.settings_button = ct.CTkButton(master = self.left_sidebar,
@@ -78,7 +71,7 @@ class App(ct.CTk):
                                             image = settings_icon,
                                             command = None)
         self.settings_button.grid(row = 9, column = 0, padx = 10, pady = 10)
-        
+
         # Close button on left sidebar
         close_icon = ImageTk.PhotoImage(Image.open(PATH + "/icons/close.png").resize((IMG_SIZE, IMG_SIZE)).convert("RGBA"))
         self.close_button = ct.CTkButton(master = self.left_sidebar,
@@ -99,7 +92,7 @@ class App(ct.CTk):
 
     def change_theme(self):
         ct.set_default_color_theme("blue")
-    
+
     def change_mode(self):
         if 0 == 1: ## change 0 to be the switch object .get()
             ct.set_appearance_mode("dark")
