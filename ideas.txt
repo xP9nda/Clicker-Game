@@ -1,0 +1,20 @@
+main button which you press to farm crops - hoe icon, wheat, etc 
+no cooldown on button
+when you click it you are given a random crop
+weighted crop system (30 crops, infinite stacks)
+with rarities - common (wheat, barley, corn), uncommon (pumpkin, melon, cucumber),
+rare (banana, strawberry), epic (pineapple, cocoa beans, coffee beans), legendary (dragonfruit etc)
+
+when you click the button it chooses a rarity, then from that rarity it chooses a crop,
+both systems being weighted
+
+inventory grid with big box at the top - when you click on something in your inventory it shows
+information about the crop, being how much you can get from selling it, how many you have, how many
+youve found in total etc
+
+market tab where you can sell crops for the set amount what they are worth
+buttons for sell all etc
+
+upgrades tab - better quality hoe - increases chance to find rarer crops
+- better quality crops - sell the crops for more money
+
